@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 
 import { LandingModule } from './landing';
+import { DashboardModule } from './dashboard';
 
 export const API_ENDPOINT_AUTHORIZED: string = 'API_ENDPOINT_AUTHORIZED';
 export const API_ENDPOINT_LOGIN: string = 'API_ENDPOINT_LOGIN';
@@ -26,7 +27,8 @@ export const API_ENDPOINT_LOGIN: string = 'API_ENDPOINT_LOGIN';
     RouterModule.forRoot(routes, {
       useHash: true
     }),
-    LandingModule
+    LandingModule,
+    DashboardModule
   ],
   providers: [
     { 
