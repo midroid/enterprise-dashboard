@@ -2,14 +2,14 @@
 <div class="w3-top">
   <ul class="w3-navbar" id="myNavbar">
     <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-      <a class="w3-hover-black" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <a class="w3-hover-black" href="javascript:void(0);" (click)="toggleFunction()" title="Toggle Navigation Menu">
         <i class="fa fa-bars"></i>
       </a>
     </li>
-    <li class="w3-left-align"><a href="#home">HOME</a></li>
-    <li class="w3-hide-small"><a href="#about"><i class="fa fa-user"></i> ABOUT</a></li>
-    <li class="w3-hide-small"><a href="#portfolio"><i class="fa fa-th"></i> PORTFOLIO</a></li>
-    <li class="w3-hide-small"><a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a></li>
+    <li class="w3-left-align"><a [routerLink]="['/landing']" fragment="home" (click)="anchorClicked()">HOME</a></li>
+    <li class="w3-hide-small"><a [routerLink]="['/landing']" fragment="about" (click)="anchorClicked()"><i class="fa fa-user"></i> ABOUT</a></li>
+    <li class="w3-hide-small"><a [routerLink]="['/landing']" fragment="portfolio" (click)="anchorClicked()"><i class="fa fa-th"></i> PORTFOLIO</a></li>
+    <li class="w3-hide-small"><a [routerLink]="['/landing']" fragment="contact" (click)="anchorClicked()"><i class="fa fa-envelope"></i> CONTACT</a></li>
     <li class="w3-hide-small w3-right">
       <a href="#" class="w3-hover-red">
         <i class="fa fa-search"></i>
@@ -18,12 +18,11 @@
   </ul>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+  <div id="navDemo" *ngIf="toggleSmallMenuView" class="w3-hide-large w3-hide-medium">
     <ul class="w3-navbar w3-left-align w3-white">
-      <li><a href="#about" onclick="toggleFunction()">ABOUT</a></li>
-      <li><a href="#portfolio" onclick="toggleFunction()">PORTFOLIO</a></li>
-      <li><a href="#contact" onclick="toggleFunction()">CONTACT</a></li>
-      <li><a href="#">SEARCH</a></li>
+      <li><a [routerLink]="['/landing']" fragment="about" (click)="toggleFunction()">ABOUT</a></li>
+      <li><a [routerLink]="['/landing']" fragment="portfolio" (click)="toggleFunction()">PORTFOLIO</a></li>
+      <li><a [routerLink]="['/landing']" fragment="contact"href="#contact" (click)="toggleFunction()">CONTACT</a></li>
     </ul>
   </div>
 </div>
