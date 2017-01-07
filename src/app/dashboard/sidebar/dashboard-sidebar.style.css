@@ -1,0 +1,23 @@
+.profile-card {
+  width: 200px;
+  padding: 0px;
+  height: 300px;
+}
+
+.profile-header-image {
+  background-image: url('assets/zinkhazama.jpg');
+  background-size: cover;
+  background-position: center;
+}
+[md-card-avatar] {
+    height: 170px;
+    width: 170px;
+    margin: 15px 0px 0px 15px;
+}
+.profile-card-header {
+    height: 200px;
+}
+.icon24x24 {
+  height: 24px;
+  width: 24px;
+}

@@ -7,7 +7,11 @@ import { Router } from '@angular/router';
 })
 export class Dashboard implements OnInit {
   
+ public isSidenavOpen : boolean; 
+ 
+  
  constructor(public router: Router) {
+     this.isSidenavOpen = true;
  }
 
  ngOnInit() {

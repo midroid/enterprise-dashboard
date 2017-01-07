@@ -44,7 +44,7 @@ export const API_ENDPOINT_LOGIN: string = 'API_ENDPOINT_LOGIN';
         'testURLLogin'
     }
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

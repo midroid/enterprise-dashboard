@@ -11,6 +11,7 @@ export class Landing {
   
   constructor(private route: ActivatedRoute) {
     this.toggleSmallMenuView = false;
+    this.anchorClicked();
   }
   
   toggleFunction() {

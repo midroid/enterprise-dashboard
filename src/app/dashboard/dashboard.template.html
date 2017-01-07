@@ -1,15 +1,18 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <dashboard-header></dashboard-header>
-    </div>
-</nav>
-<div class="container-fluid">
-    <div class="row">
-        <div class="sidebar">
-            <dashboard-sidebar></dashboard-sidebar>
-        </div>
-        <div class="main">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
+<md-sidenav-container>
+    <!-- Sidenav control-->
+    <md-sidenav #sidenav mode="side" opened="isSidenavOpen">
+        <dashboard-sidebar></dashboard-sidebar>
+    </md-sidenav>
+    
+    <!-- Top Bar -->
+      <md-toolbar color="primary">
+        <button class="app-icon-button" (click)="sidenav.toggle()">
+          <i class="material-icons app-toolbar-menu">menu</i>
+        </button>
+        Enterprise Dashboard
+        <span class="app-toolbar-filler"></span>
+        <button md-button >Sign Out</button>
+      </md-toolbar>
+  <!-- primary content -->
+      <router-outlet></router-outlet>
+</md-sidenav-container>
