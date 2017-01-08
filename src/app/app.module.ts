@@ -11,6 +11,8 @@ import { routes } from './app.routes';
 
 import { LandingModule } from './landing';
 import { DashboardModule } from './dashboard';
+//import { AreaChartModule } from './modules/area-chart';
+import { D3showcaseModule } from './modules/d3showcase';
 
 export const API_ENDPOINT_AUTHORIZED: string = 'API_ENDPOINT_AUTHORIZED';
 export const API_ENDPOINT_LOGIN: string = 'API_ENDPOINT_LOGIN';
@@ -28,7 +30,9 @@ export const API_ENDPOINT_LOGIN: string = 'API_ENDPOINT_LOGIN';
       useHash: true
     }),
     LandingModule,
-    DashboardModule
+    DashboardModule,
+    //AreaChartModule,
+    D3showcaseModule
   ],
   providers: [
     { 

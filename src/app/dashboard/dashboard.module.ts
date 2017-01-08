@@ -8,13 +8,15 @@ import { DashboardHeaderComponent } from './header';
 import { DashboardSidebarComponent } from './sidebar';
 
 import { DashboardRoutesModule } from './dashboard-routes.module';
+import { D3showcaseModule } from '../modules/d3showcase';
 
 @NgModule({
   imports : [
     CommonModule,
     FormsModule,
     DashboardRoutesModule,
-    MaterialModule
+    MaterialModule,
+    D3showcaseModule
   ],
   declarations: [
     Dashboard,
