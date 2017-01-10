@@ -4,7 +4,8 @@ import { Component,
   AfterViewInit, 
   Input, 
   ElementRef, 
-  ViewChild } from '@angular/core';
+  ViewChild,
+  HostListener } from '@angular/core';
 import { AreaChartConfig } from './area-chart-config';
 import * as D3 from 'd3';
 import * as Moment from 'moment';
@@ -34,6 +35,11 @@ export class AreaChartComponent implements OnInit, OnChanges, AfterViewInit {
 
   ngOnInit() {
   }
+  
+  @HostListener('window:resize')
+  onResize() {
+    this.drawD3();
+  }
 
   ngAfterViewInit() {
     this.HTMLElement  = this.element.nativeElement;
@@ -47,6 +53,14 @@ export class AreaChartComponent implements OnInit, OnChanges, AfterViewInit {
 
   ngOnChanges(): void {
     if (!this.config || this.config.length === 0 || !this.host) return;
+    this.setup();
+    this.buildSVG();
+    this.populate();
+    this.drawXAxis();
+    this.drawYAxis();
+  }
+  
+  private drawD3() {
     this.setup();
     this.buildSVG();
     this.populate();
