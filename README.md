@@ -1,4 +1,5 @@
 # EnterpriseDashbaord
+Business Dashboard for enterprise application built with angular 2. You can use it to start building your applications with minimum bootstrapping. New modules can be added easily.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
